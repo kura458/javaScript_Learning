@@ -1,0 +1,76 @@
+
+/* General page styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #222;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Main container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 12px;
+}
+
+p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+/* Favorite items list */
+.item-list {
+  list-style: none;
+}
+
+.item-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  margin-bottom: 12px;
+  background-color: #f8f8fc;
+  border-radius: 8px;
+  font-size: 17px;
+}
+
+/* Favorite heart button */
+.favorite-icon {
+  border: none;
+  background: transparent;
+  color: #777;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.favorite-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Filled favorite heart */
+.filled {
+  color: #e63946;
+}
+
+.favorite-icon:focus-visible {
+  outline: 2px solid #e63946;
+  outline-offset: 4px;
+}
