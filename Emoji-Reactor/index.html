@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Character encoding and responsive viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
+  <title>Emoji Reactor</title>
+
+  <!-- Connect the CSS stylesheet -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <main>
+    <!-- Application heading -->
+    <h1 class="title">How are you feeling today?</h1>
+
+    <!-- Instructions for the user -->
+    <p class="description">
+      Click on the buttons below to rate your emotions.
+    </p>
+
+    <!-- Container for all emotion buttons -->
+    <div class="btn-container">
+
+      <!-- Happy emotion button -->
+      <button id="happy-btn" class="emoji-btn"
+        aria-label="Happy face emoji">
+        <span role="img" aria-hidden="true">😊</span>
+        <span class="count">0/10</span>
+      </button>
+
+      <!-- Confused emotion button -->
+      <button id="confused-btn" class="emoji-btn"
+        aria-label="Confused face emoji">
+        <span role="img" aria-hidden="true">😕</span>
+        <span class="count">0/10</span>
+      </button>
+
+      <!-- Sad emotion button -->
+      <button id="sad-btn" class="emoji-btn"
+        aria-label="Sad face emoji">
+        <span role="img" aria-hidden="true">😢</span>
+        <span class="count">0/10</span>
+      </button>
+
+      <!-- Loving emotion button -->
+      <button id="loving-btn" class="emoji-btn"
+        aria-label="Loving face emoji">
+        <span role="img" aria-hidden="true">😍</span>
+        <span class="count">0/10</span>
+      </button>
+
+    </div>
+  </main>
+
+  <!-- Connect the JavaScript file -->
+  <script src="./script.js"></script>
+</body>
+
+</html>
