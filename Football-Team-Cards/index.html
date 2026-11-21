@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Argentina football team, meet its players, and filter the squad by position.">
+  <title>Argentina FC | Team Cards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-container">
+    <header class="hero">
+      <div class="hero-top">
+        <span class="eyebrow">THE NATIONAL SQUAD</span>
+        <span class="season-badge">SEASON <span id="year">2026</span></span>
+      </div>
+
+      <div class="team-heading">
+        <div class="team-emblem" aria-hidden="true">⚽</div>
+        <div>
+          <p class="team-label">WELCOME TO</p>
+          <h1 id="team">Argentina</h1>
+          <p class="coach-line">Head Coach: <span id="head-coach">Lionel Scaloni</span></p>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <span>ONE TEAM. ONE DREAM.</span>
+        <span>PLAYER ROSTER <span class="live-dot"></span></span>
+      </div>
+    </header>
+
+    <section class="roster-section" aria-labelledby="roster-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MEET THE SQUAD</p>
+          <h2 id="roster-title">Our Players</h2>
+          <p class="section-description">Discover the players representing the team.</p>
+        </div>
+
+        <div class="filter-control">
+          <label for="players">Filter by position</label>
+          <select id="players">
+            <option value="all">All Players</option>
+            <option value="forward">Position Forward</option>
+            <option value="midfielder">Position Midfielder</option>
+            <option value="defender">Position Defender</option>
+            <option value="goalkeeper">Position Goalkeeper</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="player-cards" class="player-grid" aria-live="polite"></div>
+    </section>
+
+    <footer class="footer">
+      <p>ARGENTINA FC <span>·</span> BUILT WITH PASSION FOR FOOTBALL</p>
+      <p>Player roster demonstration project</p>
+    </footer>
+  </main>
+</body>
+</html>
