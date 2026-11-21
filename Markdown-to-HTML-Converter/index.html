@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Markdown Studio is a simple, live Markdown to HTML converter and preview tool.">
+
+    <title>Markdown Studio | Markdown to HTML Converter</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <div class="brand-icon">M</div>
+            <div>
+                <h1>Markdown Studio</h1>
+                <p>Write Markdown. See HTML instantly.</p>
+            </div>
+        </div>
+
+        <span class="status">
+            <span class="status-dot"></span>
+            Live Preview
+        </span>
+    </header>
+
+    <main class="main-content">
+        <section class="intro">
+            <span class="eyebrow">DEVELOPER TOOL</span>
+            <h2>Markdown to HTML Converter</h2>
+            <p>
+                Write your Markdown on the left and instantly see the
+                generated HTML and rendered result.
+            </p>
+        </section>
+
+        <section class="workspace">
+            <div class="panel editor-panel">
+                <div class="panel-header">
+                    <div>
+                        <span class="panel-label">01 / EDITOR</span>
+                        <h3>Markdown Input</h3>
+                    </div>
+                    <span class="file-label">markdown.md</span>
+                </div>
+
+                <textarea
+                    id="markdown-input"
+                    placeholder="# Welcome to Markdown Studio
+
+Write **bold text** or *italic text*.
+
+## Features
+
+- Headings
+- Bold and italic
+- Images and links
+- Blockquotes
+
+> Start writing your Markdown here!"
+                    spellcheck="false"
+                    aria-label="Markdown input"
+                ></textarea>
+
+                <div class="panel-footer">
+                    <span>Markdown supported</span>
+                    <span id="character-count">0 characters</span>
+                </div>
+            </div>
+
+            <div class="panel output-panel">
+                <div class="panel-header">
+                    <div>
+                        <span class="panel-label">02 / OUTPUT</span>
+                        <h3>Raw HTML</h3>
+                    </div>
+                    <span class="file-label">output.html</span>
+                </div>
+
+                <div id="html-output" aria-live="polite"></div>
+
+                <div class="panel-footer">
+                    <span>Generated HTML source</span>
+                    <span>HTML</span>
+                </div>
+            </div>
+
+            <div class="panel preview-panel">
+                <div class="panel-header">
+                    <div>
+                        <span class="panel-label">03 / PREVIEW</span>
+                        <h3>Live Preview</h3>
+                    </div>
+                    <span class="preview-indicator">Rendered</span>
+                </div>
+
+                <div id="preview" aria-live="polite"></div>
+
+                <div class="panel-footer">
+                    <span>Rendered result</span>
+                    <span>Preview</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="supported-features">
+            <h3>Supported Markdown</h3>
+
+            <div class="feature-list">
+                <span># Heading</span>
+                <span>**Bold**</span>
+                <span>*Italic*</span>
+                <span>![Image](URL)</span>
+                <span>[Link](URL)</span>
+                <span>&gt; Quote</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built with HTML, CSS and JavaScript.</p>
+        <p>Markdown Studio &copy; 2026</p>
+    </footer>
+</body>
+</html>
