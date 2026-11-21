@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An accessible note-taking application with an editable note and live save notifications.">
+  <title>NoteSpace | Accessible Note Taking</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <a href="#" class="brand" aria-label="NoteSpace home">
+      <span class="brand-icon">✎</span>
+      NoteSpace
+    </a>
+    <span class="header-label">YOUR PERSONAL WRITING SPACE</span>
+  </header>
+
+  <main class="app-container">
+    <section class="welcome">
+      <p class="eyebrow">CAPTURE YOUR THOUGHTS</p>
+      <h1>Your ideas, <span>your space.</span></h1>
+      <p class="subtitle">
+        A simple, accessible space to write, edit, and keep track of your thoughts.
+      </p>
+    </section>
+
+    <section class="editor-section" aria-labelledby="editor-heading">
+      <div class="editor-heading">
+        <div>
+          <p class="eyebrow">MY WORKSPACE</p>
+          <h2 id="editor-heading">Your note</h2>
+        </div>
+        <span class="editor-badge">EDITABLE NOTE</span>
+      </div>
+
+      <p class="helper-text">Click or tap inside the note to edit your text.</p>
+
+      <div id="note" class="note" contenteditable="true"
+        aria-label="Note editor" spellcheck="true">
+        Many languages have words that carry meanings so specific or culturally rooted that they can't be neatly translated into English.
+
+        One example is the Japanese word "tsundoku", which refers to the habit of acquiring books and letting them pile up unread, something many book lovers can relate to. Another is the Portuguese word "saudade", describing a deep, bittersweet longing for something or someone that is absent. Meanwhile, the French word "Dépaysement" captures the disorienting yet exciting feeling of being in a new place, far from home.
+
+        These unique words remind us that language is more than vocabulary: it's a window into the values, habits, and emotions of the cultures that create it.
+      </div>
+
+      <div class="editor-footer">
+        <span class="save-indicator">
+          <span class="indicator-dot" aria-hidden="true"></span>
+          Changes are checked when you leave the editor
+        </span>
+        <span class="keyboard-hint">Tip: Click outside to finish editing</span>
+      </div>
+
+      <div id="status" class="status" aria-live="polite" role="status"></div>
+    </section>
+
+    <section class="accessibility-note">
+      <span class="accessibility-icon" aria-hidden="true">♿</span>
+      <p>
+        <strong>Designed with accessibility in mind.</strong>
+        The editor provides a descriptive label and announces save updates
+        to assistive technologies.
+      </p>
+    </section>
+
+    <footer class="app-footer">
+      <p>NoteSpace · A small space for big ideas.</p>
+      <p>Built with HTML, CSS and JavaScript.</p>
+    </footer>
+  </main>
+</body>
+</html>
