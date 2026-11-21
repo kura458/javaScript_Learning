@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RegexLab is a simple, interactive regular expression playground for testing patterns and highlighting matches.">
+  <title>RegexLab | Regular Expression Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <header class="header">
+      <a href="#" class="brand">
+        <span class="brand-icon">.*</span>
+        <span>Regex<span class="brand-accent">Lab</span></span>
+      </a>
+
+      <span class="header-label">
+        <span class="status-dot"></span>
+        REGULAR EXPRESSION PLAYGROUND
+      </span>
+    </header>
+
+    <main class="main-content">
+      <section class="hero">
+        <span class="eyebrow">DEVELOPER TOOLKIT</span>
+        <h1>Test your patterns.<br><span>Find your matches.</span></h1>
+        <p>
+          Write a regular expression, enter your test string,
+          and instantly see what matches.
+        </p>
+      </section>
+
+      <section class="sandbox-card">
+        <div class="card-heading">
+          <div>
+            <span class="section-number">01 / CONFIGURATION</span>
+            <h2>Regular Expression</h2>
+          </div>
+          <span class="tool-badge">REGEX EDITOR</span>
+        </div>
+
+        <label for="pattern" class="field-label">PATTERN</label>
+
+        <div class="pattern-wrapper">
+          <span class="slash">/</span>
+          <input
+            type="text"
+            id="pattern"
+            name="pattern"
+            placeholder="Enter your regex pattern"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <span class="slash">/</span>
+        </div>
+
+        <div class="flags-section">
+          <span class="field-label">FLAGS</span>
+
+          <div class="flags-list">
+            <label class="flag-option" for="i">
+              <input type="checkbox" name="flags" id="i">
+              <span class="flag-name">i</span>
+              <span class="flag-description">Case insensitive</span>
+            </label>
+
+            <label class="flag-option" for="g">
+              <input type="checkbox" name="flags" id="g">
+              <span class="flag-name">g</span>
+              <span class="flag-description">Global search</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card-heading test-heading">
+          <div>
+            <span class="section-number">02 / INPUT</span>
+            <h2>Test String</h2>
+          </div>
+          <span class="input-hint">EDITABLE TEXT</span>
+        </div>
+
+        <label for="test-string" class="field-label">YOUR TEXT</label>
+
+        <div
+          id="test-string"
+          class="test-string"
+          contenteditable="true"
+          role="textbox"
+          aria-label="Text to test against the regular expression"
+          aria-multiline="true"
+          placeholder="Enter or paste your test string here..."
+          spellcheck="false"
+        >The quick brown fox jumps over 13 lazy dogs. Contact: hello@example.com</div>
+
+        <button class="test-button" id="test-btn" type="button">
+          <span>Run Regex Test</span>
+          <span class="button-arrow">→</span>
+        </button>
+
+        <div class="result-section">
+          <div class="result-heading">
+            <div>
+              <span class="section-number">03 / OUTPUT</span>
+              <h2>Match Results</h2>
+            </div>
+            <span class="result-indicator">ANALYSIS</span>
+          </div>
+
+          <div class="result-box">
+            <div class="result-top">
+              <span class="result-label">MATCHED TEXT</span>
+              <span id="match-count" class="match-count">0 MATCHES</span>
+            </div>
+
+            <p id="result" aria-live="polite">Your results will appear here.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tips">
+        <h3>Quick Regex Reference</h3>
+        <div class="reference-grid">
+          <div class="reference-item">
+            <code>\d</code>
+            <span>Any digit</span>
+          </div>
+          <div class="reference-item">
+            <code>\w</code>
+            <span>Word character</span>
+          </div>
+          <div class="reference-item">
+            <code>\s</code>
+            <span>Whitespace</span>
+          </div>
+          <div class="reference-item">
+            <code>+</code>
+            <span>One or more</span>
+          </div>
+          <div class="reference-item">
+            <code>*</code>
+            <span>Zero or more</span>
+          </div>
+          <div class="reference-item">
+            <code>^</code>
+            <span>Start of string</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>RegexLab © 2026</span>
+      <span>Built with HTML, CSS & JavaScript</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
