@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SpamGuard checks messages for suspicious phrases and common spam patterns.">
+  <meta name="theme-color" content="#101827">
+  <title>SpamGuard | Smart Message Checker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="SpamGuard home">
+        <span class="brand-icon">S</span>
+        <span>SpamGuard<span class="brand-dot">.</span></span>
+      </a>
+      <span class="status"><span class="status-dot"></span> Protection active</span>
+    </header>
+
+    <main class="main-content">
+      <section class="hero">
+        <span class="eyebrow">MESSAGE SECURITY TOOL</span>
+        <h1>Think before<br>you <span>trust.</span></h1>
+        <p class="hero-description">
+          Check suspicious messages with a simple spam detection tool.
+          Paste your message below and let SpamGuard analyze it.
+        </p>
+      </section>
+
+      <section class="checker-card" aria-labelledby="checker-title">
+        <div class="card-heading">
+          <div>
+            <h2 id="checker-title">Message scanner</h2>
+            <p>Enter a message to scan for common spam patterns.</p>
+          </div>
+          <span class="shield-icon" aria-hidden="true">✓</span>
+        </div>
+
+        <label for="message-input">Your message</label>
+        <textarea
+          id="message-input"
+          name="message"
+          rows="7"
+          maxlength="2000"
+          placeholder="Paste or type your message here..."
+          aria-describedby="input-hint character-count"
+        ></textarea>
+
+        <div class="input-meta">
+          <span id="input-hint">Maximum 2,000 characters</span>
+          <span id="character-count">0 / 2000</span>
+        </div>
+
+        <button class="scan-button" id="check-message-btn" type="button">
+          <span>Scan message</span>
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <div class="result-panel" id="result-panel" aria-live="polite" hidden>
+          <span class="result-icon" id="result-icon" aria-hidden="true"></span>
+          <div>
+            <h3 id="result-title">Scan result</h3>
+            <p id="result-message"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-grid" aria-label="How SpamGuard works">
+        <article class="info-item">
+          <span class="info-number">01</span>
+          <h3>Paste</h3>
+          <p>Enter the message you want to check.</p>
+        </article>
+        <article class="info-item">
+          <span class="info-number">02</span>
+          <h3>Analyze</h3>
+          <p>SpamGuard checks for suspicious phrases and patterns.</p>
+        </article>
+        <article class="info-item">
+          <span class="info-number">03</span>
+          <h3>Review</h3>
+          <p>See whether the message matches the current spam rules.</p>
+        </article>
+      </section>
+
+      <p class="disclaimer">
+        Note: This is an educational pattern-based detector, not a guarantee
+        that a message is safe or harmful.
+      </p>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 SpamGuard</span>
+      <span>Built with HTML, CSS & JavaScript</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
