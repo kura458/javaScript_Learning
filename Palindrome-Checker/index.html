@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Check whether a word or phrase is a palindrome with this interactive palindrome checker.">
+  <meta name="theme-color" content="#111827">
+  <title>Palindrome Checker | WordMirror</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="navbar">
+      <a href="#" class="brand">
+        <span class="brand-icon">W</span>
+        WordMirror<span class="brand-dot">.</span>
+      </a>
+      <span class="nav-label">JAVASCRIPT PROJECT</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <span class="eyebrow">WORD PLAY MADE SIMPLE</span>
+        <h1>Does it read the<br>same <span>backwards?</span></h1>
+        <p>
+          Discover whether a word or phrase is a palindrome.
+          We ignore spaces, punctuation, and letter casing.
+        </p>
+      </section>
+
+      <section class="checker-card">
+        <div class="card-top">
+          <div>
+            <span class="card-label">PALINDROME TEST</span>
+            <h2>Try a word or phrase</h2>
+          </div>
+          <span class="mirror-icon" aria-hidden="true">↔</span>
+        </div>
+
+        <form id="palindrome-form">
+          <label for="text-input">Enter your text</label>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="text-input"
+              placeholder="e.g. A man, a plan, a canal. Panama"
+              autocomplete="off"
+              maxlength="300"
+            >
+          </div>
+
+          <button type="submit" id="check-btn">
+            Check palindrome
+            <span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <div id="result" class="result" aria-live="polite"></div>
+      </section>
+
+      <section class="examples">
+        <div class="section-heading">
+          <h2>Try these examples</h2>
+          <span>GET STARTED</span>
+        </div>
+
+        <div class="example-list">
+          <button class="example" type="button" data-example="race car">
+            <span>race car</span>
+            <span class="example-tag">Palindrome</span>
+          </button>
+          <button class="example" type="button" data-example="hello world">
+            <span>hello world</span>
+            <span class="example-tag negative">Not a palindrome</span>
+          </button>
+          <button class="example" type="button" data-example="never odd or even">
+            <span>never odd or even</span>
+            <span class="example-tag">Palindrome</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="info">
+        <h2>What is a palindrome?</h2>
+        <p>
+          A palindrome is a word, number, or phrase that reads the same
+          forward and backward after ignoring spaces, punctuation,
+          symbols, and capitalization.
+        </p>
+        <div class="info-example">
+          <span>FORWARD</span>
+          <strong>LEVEL</strong>
+          <span class="arrow">↕</span>
+          <span>BACKWARD</span>
+          <strong>LEVEL</strong>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 WordMirror</span>
+      <span>Built with HTML, CSS & JavaScript</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
