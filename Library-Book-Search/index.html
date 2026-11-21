@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search the library collection and check book availability.">
+  <title>BookFinder | Library Search</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-container">
+    <section class="search-card" aria-labelledby="page-title">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">B</div>
+        <span>BOOKFINDER</span>
+      </div>
+
+      <div class="hero">
+        <span class="eyebrow">YOUR PERSONAL LIBRARY</span>
+        <h1 id="page-title">Find your next <span>great read.</span></h1>
+        <p>Search our collection and discover whether your favorite book is available.</p>
+      </div>
+
+      <div class="search-section">
+        <label for="bookTitleInput">Book title</label>
+
+        <div class="search-controls">
+          <input
+            type="search"
+            id="bookTitleInput"
+            placeholder="e.g. The Hobbit"
+            autocomplete="off"
+            aria-describedby="search-hint"
+          >
+          <button id="search" type="button">
+            Search <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <p id="search-hint" class="hint">Enter a book title from our collection.</p>
+      </div>
+
+      <div class="results" aria-live="polite" aria-atomic="true">
+        <p id="statusMessage" class="status-message">Your search results will appear here.</p>
+        <p id="scanStatus" class="scan-status"></p>
+      </div>
+
+      <footer>
+        <span>BOOKFINDER</span>
+        <span>Discover. Read. Repeat.</span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
