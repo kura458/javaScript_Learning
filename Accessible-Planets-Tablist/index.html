@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore fascinating facts about Earth, Saturn, and Mars in an interactive planet guide.">
+  <title>Planet Explorer | Discover Our Solar System</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="Planet Explorer home">
+      <span class="logo-icon">✦</span> Planet Explorer
+    </a>
+    <span class="header-label">OUR SOLAR SYSTEM</span>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">A JOURNEY THROUGH SPACE</p>
+      <h1>Discover Our <span>Planets</span></h1>
+      <p class="intro-text">
+        Explore fascinating worlds, uncover incredible facts, and discover
+        what makes each planet unique.
+      </p>
+    </section>
+
+    <section class="planet-explorer" aria-labelledby="tabs-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE THE UNIVERSE</p>
+          <h2 id="tabs-title">Choose a planet</h2>
+        </div>
+        <span class="planet-count">03 PLANETS</span>
+      </div>
+
+      <div class="tabs" role="tablist" aria-labelledby="tabs-title">
+        <button class="tab" role="tab"
+          id="tab-earth" aria-controls="panel-earth"
+          aria-selected="true" tabindex="0">
+          <span>🌍</span> Earth
+        </button>
+        <button class="tab" role="tab"
+          id="tab-saturn" aria-controls="panel-saturn"
+          aria-selected="false" tabindex="-1">
+          <span>🪐</span> Saturn
+        </button>
+        <button class="tab" role="tab"
+          id="tab-mars" aria-controls="panel-mars"
+          aria-selected="false" tabindex="-1">
+          <span>🔴</span> Mars
+        </button>
+      </div>
+
+      <div class="planet-content">
+        <article class="planet-panel" id="panel-earth"
+          role="tabpanel" aria-labelledby="tab-earth" tabindex="0">
+          <div class="planet-visual earth-visual" aria-hidden="true">🌍</div>
+          <div class="planet-info">
+            <span class="planet-tag">THE BLUE PLANET</span>
+            <h3>Earth</h3>
+            <p class="planet-description">
+              Our home in the universe. Earth is the only known planet
+              to support life, with vast oceans, diverse ecosystems,
+              and an atmosphere that protects living organisms.
+            </p>
+            <div class="facts">
+              <div class="fact">
+                <span>AVERAGE DISTANCE FROM SUN</span>
+                <strong>149.6 million km</strong>
+              </div>
+              <div class="fact">
+                <span>DAY LENGTH</span>
+                <strong>24 hours</strong>
+              </div>
+              <div class="fact">
+                <span>TYPE</span>
+                <strong>Terrestrial</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="planet-panel" id="panel-saturn"
+          role="tabpanel" aria-labelledby="tab-saturn"
+          tabindex="0" hidden>
+          <div class="planet-visual saturn-visual" aria-hidden="true">🪐</div>
+          <div class="planet-info">
+            <span class="planet-tag">THE RINGED GIANT</span>
+            <h3>Saturn</h3>
+            <p class="planet-description">
+              Saturn is a magnificent gas giant famous for its spectacular
+              rings, made mostly of ice and rocky particles. It has a
+              fascinating collection of moons.
+            </p>
+            <div class="facts">
+              <div class="fact">
+                <span>AVERAGE DISTANCE FROM SUN</span>
+                <strong>1.43 billion km</strong>
+              </div>
+              <div class="fact">
+                <span>DAY LENGTH</span>
+                <strong>About 10.7 hours</strong>
+              </div>
+              <div class="fact">
+                <span>TYPE</span>
+                <strong>Gas giant</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="planet-panel" id="panel-mars"
+          role="tabpanel" aria-labelledby="tab-mars"
+          tabindex="0" hidden>
+          <div class="planet-visual mars-visual" aria-hidden="true">🔴</div>
+          <div class="planet-info">
+            <span class="planet-tag">THE RED PLANET</span>
+            <h3>Mars</h3>
+            <p class="planet-description">
+              Mars is a cold, rocky world with a reddish surface. It is
+              home to Olympus Mons, the tallest known volcano in the
+              solar system, and remains a major focus of space exploration.
+            </p>
+            <div class="facts">
+              <div class="fact">
+                <span>AVERAGE DISTANCE FROM SUN</span>
+                <strong>227.9 million km</strong>
+              </div>
+              <div class="fact">
+                <span>DAY LENGTH</span>
+                <strong>24.6 hours</strong>
+              </div>
+              <div class="fact">
+                <span>TYPE</span>
+                <strong>Terrestrial</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <p class="footer-note">Made with curiosity ✦ Exploring the universe, one planet at a time.</p>
+  </main>
+</body>
+</html>
