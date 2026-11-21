@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Play Rock, Paper, Scissors against the computer. First to three points wins!">
+  <title>Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game-container">
+    <header class="game-header">
+      <p class="eyebrow">THE CLASSIC GAME</p>
+      <h1>Rock, Paper, Scissors</h1>
+      <p class="subtitle">Challenge the computer. First to 3 points wins!</p>
+    </header>
+
+    <details class="rules-container">
+      <summary>How to play</summary>
+      <ul>
+        <li>Rock beats Scissors.</li>
+        <li>Scissors beats Paper.</li>
+        <li>Paper beats Rock.</li>
+        <li>Matching choices result in a tie.</li>
+      </ul>
+    </details>
+
+    <section class="score-container" aria-label="Game scores">
+      <div class="score-card">
+        <span class="score-label">YOU</span>
+        <span class="score" id="player-score" aria-live="polite">0</span>
+      </div>
+      <div class="score-divider">VS</div>
+      <div class="score-card">
+        <span class="score-label">COMPUTER</span>
+        <span class="score" id="computer-score" aria-live="polite">0</span>
+      </div>
+    </section>
+
+    <section class="options-container">
+      <h2>Make your move</h2>
+      <div class="btn-container">
+        <button id="rock-btn" class="choice-btn" type="button">
+          <span class="choice-icon" aria-hidden="true">✊</span>
+          <span>Rock</span>
+        </button>
+        <button id="paper-btn" class="choice-btn" type="button">
+          <span class="choice-icon" aria-hidden="true">✋</span>
+          <span>Paper</span>
+        </button>
+        <button id="scissors-btn" class="choice-btn" type="button">
+          <span class="choice-icon" aria-hidden="true">✌️</span>
+          <span>Scissors</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="results-container" aria-live="polite">
+      <p id="results-msg">Choose your first move to start!</p>
+      <p id="winner-msg"></p>
+      <button class="reset-btn" id="reset-game-btn" type="button">
+        Play again
+      </button>
+    </section>
+
+    <footer class="game-footer">
+      Built with HTML, CSS & JavaScript
+    </footer>
+  </main>
+</body>
+</html>
