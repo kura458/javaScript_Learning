@@ -1,0 +1,20 @@
+
+{
+  "name": "linked-list-operations",
+  "version": "1.0.0",
+  "description": "A complete singly linked list implementation with insertion, deletion, searching, and testing.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "javascript",
+    "linked-list",
+    "data-structures",
+    "algorithms",
+    "computer-science"
+  ],
+  "author": "Kura Lemma",
+  "license": "MIT"
+}
