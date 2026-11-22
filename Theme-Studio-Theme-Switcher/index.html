@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Theme Studio lets you personalize your space with beautiful ocean, sunset, and forest themes."
+  >
+  <meta name="theme-color" content="#071b32">
+  <title>Theme Studio | Personalize Your Space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="theme-ocean">
+  <main class="app-container">
+    <section class="theme-card" aria-labelledby="app-title">
+
+      <header class="brand">
+        <div class="brand-icon" aria-hidden="true">✦</div>
+        <div>
+          <h1 id="app-title">Theme Studio</h1>
+          <p class="brand-subtitle">Choose your atmosphere</p>
+        </div>
+      </header>
+
+      <section class="theme-intro">
+        <span class="eyebrow">YOUR SPACE, YOUR STYLE</span>
+        <h2>Set the mood.</h2>
+        <p class="description">
+          Every color tells a story. Choose a theme that matches
+          your mood and makes your space feel right.
+        </p>
+      </section>
+
+      <section class="theme-selector" aria-label="Theme selection">
+        <p class="selector-label">Explore themes</p>
+
+        <button
+          id="theme-switcher-button"
+          type="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="theme-dropdown"
+        >
+          <span>Switch Theme</span>
+          <span class="button-arrow" aria-hidden="true">⌄</span>
+        </button>
+
+        <ul
+          id="theme-dropdown"
+          role="menu"
+          aria-labelledby="theme-switcher-button"
+          hidden
+        >
+          <li id="theme-ocean" role="menuitem" tabindex="0">ocean</li>
+          <li id="theme-sunset" role="menuitem" tabindex="0">sunset</li>
+          <li id="theme-forest" role="menuitem" tabindex="0">forest</li>
+        </ul>
+      </section>
+
+      <section class="preview" aria-label="Selected theme preview">
+        <div class="preview-header">
+          <span class="preview-label">CURRENT THEME</span>
+          <span class="preview-symbol" aria-hidden="true">✧</span>
+        </div>
+
+        <div class="preview-content">
+          <h2 id="theme-title">Ocean</h2>
+          <p id="theme-message" aria-live="polite">
+            Find your calm and let your ideas flow like the ocean.
+          </p>
+        </div>
+      </section>
+
+      <footer class="theme-footer">
+        <span>DESIGNED FOR YOUR MOOD</span>
+        <span>✦ THEME STUDIO</span>
+      </footer>
+
+    </section>
+  </main>
+</body>
+</html>
