@@ -1,0 +1,24 @@
+
+{
+  "name": "searching-and-sorting-algorithms",
+  "version": "1.0.0",
+  "description": "A reusable JavaScript library of searching and sorting algorithms with automatic algorithm selection and automated tests.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "javascript",
+    "algorithms",
+    "data-structures",
+    "searching",
+    "sorting",
+    "binary-search",
+    "merge-sort",
+    "quick-sort",
+    "computer-science"
+  ],
+  "author": "Kura Lemma",
+  "license": "MIT"
+}
