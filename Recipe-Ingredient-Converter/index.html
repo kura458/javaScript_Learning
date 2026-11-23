@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Easily convert recipe ingredients between cups, grams, ounces, and teaspoons."
+  >
+
+  <title>MeasureMate | Recipe Ingredient Converter</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="#" class="brand" aria-label="MeasureMate home">
+      <span class="brand-icon">M</span>
+      <span>Measure<span class="brand-highlight">Mate</span></span>
+    </a>
+
+    <span class="header-label">KITCHEN CONVERSION TOOL</span>
+  </header>
+
+  <main class="main-container">
+    <section class="hero">
+      <span class="eyebrow">COOK WITH CONFIDENCE</span>
+
+      <h1>Perfect measurements.<br><span>Every single time.</span></h1>
+
+      <p>
+        Convert your recipe ingredients between common kitchen measurements
+        and adjust quantities for different serving sizes.
+      </p>
+    </section>
+
+    <section class="converter-card" aria-labelledby="converter-title">
+      <div class="card-heading">
+        <div>
+          <span class="section-label">RECIPE TOOLS</span>
+          <h2 id="converter-title">Ingredient Converter</h2>
+        </div>
+
+        <span class="card-icon" aria-hidden="true">⚖</span>
+      </div>
+
+      <form id="recipe-form">
+        <div class="form-group">
+          <label for="ingredient">Ingredient name</label>
+          <input
+            type="text"
+            id="ingredient"
+            placeholder="e.g. All-purpose flour"
+            maxlength="60"
+            required
+          >
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quantity">Base quantity</label>
+            <input
+              type="number"
+              id="quantity"
+              placeholder="e.g. 2"
+              min="0.01"
+              step="any"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="unit">Measurement unit</label>
+            <select id="unit">
+              <option value="cup">Cup</option>
+              <option value="gram">Gram</option>
+              <option value="ounce">Ounce</option>
+              <option value="teaspoon">Teaspoon</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="servings">Number of servings</label>
+          <input
+            type="number"
+            id="servings"
+            min="0.01"
+            step="any"
+            value="1"
+            required
+          >
+          <small>Adjust the ingredient quantity to your desired servings.</small>
+        </div>
+
+        <button type="submit" class="convert-button">
+          Convert Measurements
+          <span aria-hidden="true">→</span>
+        </button>
+      </form>
+
+      <section class="results-section" aria-labelledby="results-title">
+        <div class="results-heading">
+          <h3 id="results-title">Conversion Results</h3>
+          <span class="results-label">YOUR MEASUREMENTS</span>
+        </div>
+
+        <p id="empty-state" class="empty-state">
+          Your converted measurements will appear here.
+        </p>
+
+        <ul id="result-list" aria-live="polite"></ul>
+      </section>
+    </section>
+
+    <section class="info-section">
+      <div class="info-item">
+        <span class="info-icon">01</span>
+        <div>
+          <h3>Enter ingredients</h3>
+          <p>Add an ingredient and its original measurement.</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="info-icon">02</span>
+        <div>
+          <h3>Choose servings</h3>
+          <p>Adjust the quantity to your desired serving size.</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="info-icon">03</span>
+        <div>
+          <h3>Get conversions</h3>
+          <p>See the equivalent measurements instantly.</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="disclaimer">
+      Measurements are approximate kitchen conversions.
+      Ingredient density can affect accuracy.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Designed and developed with care.</p>
+    <p>© 2026 MeasureMate. All rights reserved.</p>
+  </footer>
+</body>
+</html>
