@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Organize and manage your favorite websites with Bookmark Manager.">
+  <meta name="theme-color" content="#101827">
+  <title>Bookmark Manager | Save What Matters</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="#" class="brand" aria-label="Bookmark Manager home">
+      <span class="brand-icon">B</span>
+      <span>Bookmark<span class="brand-highlight">Manager</span></span>
+    </a>
+    <span class="header-label">Your personal link library</span>
+  </header>
+
+  <main class="app-container">
+
+    <!-- Main Section -->
+    <section id="main-section" class="panel main-panel">
+      <div class="hero-icon">🔖</div>
+      <p class="eyebrow">YOUR DIGITAL LIBRARY</p>
+      <h1>Save what matters.</h1>
+      <p class="hero-description">
+        Keep your favorite websites organized, accessible, and all in one place.
+      </p>
+
+      <div class="field-group">
+        <label for="category-dropdown">Choose a category</label>
+        <select id="category-dropdown" name="options">
+          <option value="news" selected>News</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="work">Work</option>
+          <option value="miscellaneous">Miscellaneous</option>
+        </select>
+      </div>
+
+      <div class="button-group">
+        <button type="button" id="view-category-button" class="btn btn-secondary">
+          View Bookmarks
+        </button>
+        <button type="button" id="add-bookmark-button" class="btn btn-primary">
+          + Add Bookmark
+        </button>
+      </div>
+    </section>
+
+    <!-- Add Bookmark Form -->
+    <section id="form-section" class="panel form-panel hidden">
+      <div class="section-heading">
+        <p class="eyebrow">ADD TO YOUR COLLECTION</p>
+        <h2 class="category-name"></h2>
+        <p class="section-description">Save a website for easy access later.</p>
+      </div>
+
+      <form id="bookmark-form">
+        <div class="field-group">
+          <label for="name">Bookmark name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="e.g. freeCodeCamp"
+            autocomplete="off"
+            required
+          >
+        </div>
+
+        <div class="field-group">
+          <label for="url">Website URL</label>
+          <input
+            type="url"
+            id="url"
+            placeholder="https://example.com"
+            required
+          >
+        </div>
+
+        <div class="button-group">
+          <button type="button" id="close-form-button" class="btn btn-secondary">
+            Go Back
+          </button>
+          <button type="button" id="add-bookmark-button-form" class="btn btn-primary">
+            Save Bookmark
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Bookmark List -->
+    <section id="bookmark-list-section" class="panel list-panel hidden">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR COLLECTION</p>
+        <h2 class="category-name"></h2>
+        <p class="section-description">Select a bookmark to delete it.</p>
+      </div>
+
+      <div id="category-list"></div>
+
+      <div class="button-group">
+        <button type="button" id="close-list-button" class="btn btn-secondary">
+          Go Back
+        </button>
+        <button type="button" id="delete-bookmark-button" class="btn btn-danger">
+          Delete Selected
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with HTML, CSS & JavaScript.</p>
+    <p>Bookmark Manager &copy; 2026</p>
+  </footer>
+</body>
+</html>
