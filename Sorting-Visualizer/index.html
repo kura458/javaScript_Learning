@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SortLab is an interactive Bubble Sort visualizer that helps you understand sorting algorithms step by step.">
+  <meta name="theme-color" content="#0b1020">
+  <title>SortLab | Bubble Sort Visualizer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="SortLab home">
+        <span class="brand-icon">S</span>
+        <span>Sort<span class="brand-accent">Lab</span></span>
+      </a>
+
+      <span class="topbar-label">ALGORITHM PLAYGROUND</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">
+        <span class="status-dot"></span>
+        INTERACTIVE LEARNING
+      </div>
+
+      <h1>See how sorting <span>works.</span></h1>
+
+      <p class="hero-description">
+        Explore Bubble Sort one comparison at a time.
+        Generate numbers, watch elements move, and understand the algorithm.
+      </p>
+    </section>
+
+    <section class="visualizer-card" aria-label="Bubble Sort visualizer">
+      <div class="card-header">
+        <div>
+          <p class="section-label">VISUALIZER</p>
+          <h2>Bubble Sort</h2>
+        </div>
+
+        <span class="algorithm-tag">O(n²) TIME</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="array-heading">
+        <div>
+          <span class="step-number">01</span>
+          <h3>Array states</h3>
+        </div>
+        <span class="array-count">5 ELEMENTS</span>
+      </div>
+
+      <div id="array-container" aria-live="polite" aria-label="Sorting steps">
+        <div id="starting-array" aria-label="Starting array"></div>
+      </div>
+
+      <div class="legend">
+        <span class="legend-item">
+          <span class="legend-box comparison"></span>
+          Comparing
+        </span>
+
+        <span class="legend-item">
+          <span class="legend-box normal"></span>
+          Other elements
+        </span>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="controls">
+        <div class="control-description">
+          <span class="section-label">CONTROLS</span>
+          <p>Generate a new array or start sorting.</p>
+        </div>
+
+        <div id="btn-container">
+          <button id="generate-btn" class="button button-secondary" type="button">
+            <span aria-hidden="true">↻</span>
+            Generate
+          </button>
+
+          <button id="sort-btn" class="button button-primary" type="button">
+            <span aria-hidden="true">▶</span>
+            Sort array
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-card">
+        <span class="info-icon">01</span>
+        <h3>Compare</h3>
+        <p>Compare two neighboring numbers in the array.</p>
+      </article>
+
+      <article class="info-card">
+        <span class="info-icon">02</span>
+        <h3>Swap</h3>
+        <p>Move the larger number to the right when necessary.</p>
+      </article>
+
+      <article class="info-card">
+        <span class="info-icon">03</span>
+        <h3>Repeat</h3>
+        <p>Continue until a complete pass makes no swaps.</p>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <p>Built for learning. Powered by JavaScript.</p>
+      <span>SortLab © 2026</span>
+    </footer>
+  </main>
+</body>
+</html>
