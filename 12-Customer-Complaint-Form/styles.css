@@ -1,0 +1,389 @@
+
+:root {
+  --background: #f4f6fb;
+  --surface: #ffffff;
+  --text: #182230;
+  --muted: #697586;
+  --primary: #5546d7;
+  --primary-dark: #4032b8;
+  --border: #e1e6ef;
+  --success: #16834a;
+  --error: #dc3545;
+  --accent-bg: #f0efff;
+  --shadow: 0 18px 55px rgba(25, 35, 60, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.site-header {
+  width: 100%;
+  min-height: 76px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--primary);
+  color: white;
+  font-size: 1.1rem;
+}
+
+.brand-accent {
+  color: var(--primary);
+}
+
+.header-note,
+.secure-label,
+.site-footer span {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.page-wrapper {
+  width: min(900px, 92%);
+  margin: 0 auto;
+  padding: 65px 0 35px;
+}
+
+.intro {
+  max-width: 650px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 13px;
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.intro h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+
+.intro h1 span {
+  color: var(--primary);
+}
+
+.intro p {
+  max-width: 560px;
+  margin: 17px auto 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.form-card {
+  padding: 38px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-heading h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.card-heading p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.secure-label {
+  padding: 7px 11px;
+  border-radius: 30px;
+  background: #eaf8f0;
+  color: var(--success);
+  white-space: nowrap;
+}
+
+.form-section {
+  min-width: 0;
+  margin-top: 30px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.form-section legend {
+  width: 100%;
+  margin-bottom: 18px;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.section-number {
+  display: inline-grid;
+  width: 29px;
+  height: 29px;
+  margin-right: 8px;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--accent-bg);
+  color: var(--primary);
+  font-size: 0.75rem;
+}
+
+.required-note,
+.form-field label span,
+.submit-note span {
+  color: var(--error);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-field label,
+.textarea-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.form-field input,
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  outline: none;
+  background: #fbfcfe;
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-field input:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(85, 70, 215, 0.1);
+}
+
+.form-field small,
+.helper-text {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.section-description {
+  margin: -10px 0 16px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.choice-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 52px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: #fbfcfe;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.choice-item:has(input:checked) {
+  border-color: var(--primary);
+  background: var(--accent-bg);
+}
+
+.choice-item input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.choice-item label {
+  cursor: pointer;
+  font-size: 0.87rem;
+  font-weight: 600;
+}
+
+.solution-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.textarea-label {
+  display: block;
+  margin-bottom: 9px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.helper-text {
+  display: block;
+  margin-top: 7px;
+}
+
+.submit-area {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+}
+
+.submit-note {
+  margin-bottom: 15px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+#submit-btn {
+  width: 100%;
+  padding: 15px 22px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#submit-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+#submit-btn span {
+  margin-left: 7px;
+  font-size: 1.1rem;
+}
+
+#submit-btn:focus-visible {
+  outline: 3px solid rgba(85, 70, 215, 0.35);
+  outline-offset: 3px;
+}
+
+#message-box {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.site-footer {
+  padding: 30px 0 0;
+  text-align: center;
+}
+
+.site-footer p {
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 650px) {
+  .site-header {
+    padding: 0 5%;
+  }
+
+  .header-note {
+    font-size: 0.58rem;
+    letter-spacing: 0.6px;
+  }
+
+  .page-wrapper {
+    width: 92%;
+    padding-top: 42px;
+  }
+
+  .form-card {
+    padding: 23px 18px;
+    border-radius: 15px;
+  }
+
+  .card-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-grid,
+  .choice-grid,
+  .solution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro h1 {
+    letter-spacing: -1px;
+  }
+}
