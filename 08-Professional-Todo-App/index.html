@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="A responsive task management application built with HTML, CSS, and JavaScript."
+  >
+
+  <title>TaskFlow | Task Manager</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <main class="app-container">
+
+    <header class="app-header">
+      <a href="#" class="brand">
+        <span class="brand-icon">✓</span>
+        <span>TaskFlow</span>
+      </a>
+
+      <span class="header-label">MY WORKSPACE</span>
+    </header>
+
+    <section class="welcome-section">
+      <div>
+        <p class="eyebrow">STAY ORGANIZED</p>
+        <h1>Manage your tasks.</h1>
+        <p class="welcome-description">
+          Plan your day, track your progress, and get things done.
+        </p>
+      </div>
+
+      <div class="date-display" id="current-date"></div>
+    </section>
+
+    <section class="stats-grid" aria-label="Task statistics">
+      <article class="stat-card">
+        <span class="stat-label">Total Tasks</span>
+        <strong id="total-tasks">0</strong>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-label">Completed</span>
+        <strong id="completed-tasks">0</strong>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-label">Remaining</span>
+        <strong id="remaining-tasks">0</strong>
+      </article>
+    </section>
+
+    <section class="tasks-section">
+
+      <div class="section-header">
+        <div>
+          <h2>Your Tasks</h2>
+          <p>Everything you need to accomplish.</p>
+        </div>
+
+        <button id="open-task-form-btn" class="primary-btn" type="button">
+          <span>+</span> Add New Task
+        </button>
+      </div>
+
+      <div class="toolbar">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search your tasks..."
+          aria-label="Search tasks"
+        >
+
+        <select id="filter-select" aria-label="Filter tasks">
+          <option value="all">All Tasks</option>
+          <option value="active">Active</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+
+      <div id="tasks-container" class="tasks-container"></div>
+
+      <p id="empty-message" class="empty-message">
+        No tasks yet. Add your first task to get started!
+      </p>
+
+    </section>
+
+    <footer class="app-footer">
+      <p>TaskFlow · Built with HTML, CSS and JavaScript</p>
+    </footer>
+
+  </main>
+
+  <!-- Task Form -->
+  <form class="task-form hidden" id="task-form">
+
+    <div class="form-header">
+      <div>
+        <p class="eyebrow">TASK DETAILS</p>
+        <h2 id="form-heading">Create a Task</h2>
+      </div>
+
+      <button
+        id="close-task-form-btn"
+        class="close-btn"
+        type="button"
+        aria-label="Close form"
+      >
+        &times;
+      </button>
+    </div>
+
+    <div class="form-body">
+
+      <label for="title-input">Task Title</label>
+      <input
+        required
+        type="text"
+        id="title-input"
+        maxlength="100"
+        placeholder="What needs to be done?"
+      >
+
+      <label for="date-input">Due Date</label>
+      <input type="date" id="date-input">
+
+      <label for="description-input">Description</label>
+      <textarea
+        id="description-input"
+        rows="4"
+        maxlength="500"
+        placeholder="Add some details..."
+      ></textarea>
+
+    </div>
+
+    <div class="form-footer">
+      <button id="cancel-form-btn" class="secondary-btn" type="button">
+        Cancel
+      </button>
+
+      <button
+        id="add-or-update-task-btn"
+        class="primary-btn"
+        type="submit"
+      >
+        Add Task
+      </button>
+    </div>
+
+  </form>
+
+  <!-- Confirm Discard Dialog -->
+  <dialog id="confirm-close-dialog">
+    <div class="dialog-content">
+      <h2>Discard changes?</h2>
+      <p>Your unsaved changes will be lost.</p>
+
+      <div class="dialog-actions">
+        <button id="cancel-btn" class="secondary-btn" type="button">
+          Keep Editing
+        </button>
+
+        <button id="discard-btn" class="danger-btn" type="button">
+          Discard
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+</body>
+</html>
