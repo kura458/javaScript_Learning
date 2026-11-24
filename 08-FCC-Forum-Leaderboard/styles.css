@@ -1,0 +1,583 @@
+
+/* =========================================
+   1. RESET AND ROOT VARIABLES
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #0b1220;
+  --surface: #111c2e;
+  --surface-light: #17243a;
+  --surface-hover: #1b2b43;
+
+  --primary: #f0a83c;
+  --primary-hover: #ffc15c;
+
+  --success: #4ade80;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --border: #26364c;
+
+  --career: #f0a7a7;
+  --feedback: #7dd3fc;
+  --support: #fdba74;
+  --general: #86efac;
+  --javascript: #fde047;
+  --html-css: #c4b5fd;
+  --backend: #fbbf24;
+  --python: #67e8f9;
+  --motivation: #f9a8d4;
+
+  --radius-small: 8px;
+  --radius-medium: 14px;
+  --radius-large: 20px;
+
+  --shadow:
+    0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* =========================================
+   2. HEADER AND NAVIGATION
+========================================= */
+
+.site-header {
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(240, 168, 60, 0.10),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #0b1220, #111c2e);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 22px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.fcc-logo {
+  width: 190px;
+  display: block;
+}
+
+.community-label {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+
+.hero {
+  max-width: 1200px;
+  margin: auto;
+  padding: 55px 28px 65px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--success);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  margin-bottom: 18px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+}
+
+.title {
+  color: var(--text-primary);
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin-bottom: 18px;
+}
+
+.hero-description {
+  max-width: 620px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   4. MAIN CONTENT
+========================================= */
+
+.main-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px 28px 70px;
+}
+
+.leaderboard-section {
+  width: 100%;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.section-heading p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.forum-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 17px;
+  border-radius: var(--radius-small);
+
+  background: var(--primary);
+  color: #111827;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.forum-link:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   5. LEADERBOARD TABLE
+========================================= */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-large);
+
+  box-shadow: var(--shadow);
+}
+
+table {
+  width: 100%;
+  min-width: 800px;
+
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: var(--text-primary);
+}
+
+#topics {
+  width: 48%;
+  text-align: left;
+}
+
+#avatars {
+  width: 17%;
+}
+
+#replies {
+  width: 11%;
+}
+
+#views {
+  width: 10%;
+}
+
+#activity {
+  width: 14%;
+}
+
+thead {
+  background: var(--surface-light);
+}
+
+th {
+  padding: 19px 18px;
+
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+th:not(:first-child) {
+  text-align: center;
+}
+
+td {
+  padding: 22px 18px;
+  border-bottom: 1px solid var(--border);
+
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+td:not(:first-child) {
+  text-align: center;
+}
+
+tbody tr {
+  transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+  background: var(--surface-hover);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================
+   6. TOPIC TITLES
+========================================= */
+
+.post-title {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.6;
+
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.post-title:hover {
+  color: var(--primary);
+}
+
+/* =========================================
+   7. CATEGORY BADGES
+========================================= */
+
+.category {
+  display: inline-block;
+  width: fit-content;
+
+  padding: 5px 10px;
+  margin: 2px 0;
+
+  border-radius: 20px;
+
+  color: #111827;
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.category:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.career {
+  background: var(--career);
+}
+
+.feedback {
+  background: var(--feedback);
+}
+
+.support {
+  background: var(--support);
+}
+
+.general {
+  background: var(--general);
+}
+
+.javascript {
+  background: var(--javascript);
+}
+
+.html-css {
+  background: var(--html-css);
+}
+
+.backend {
+  background: var(--backend);
+}
+
+.python {
+  background: var(--python);
+}
+
+.motivation {
+  background: var(--motivation);
+}
+
+/* =========================================
+   8. USER AVATARS
+========================================= */
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.avatar-container img {
+  width: 34px;
+  height: 34px;
+
+  object-fit: cover;
+  border-radius: 50%;
+
+  border: 2px solid var(--surface);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.avatar-container img:hover {
+  transform: scale(1.15);
+  border-color: var(--primary);
+}
+
+/* =========================================
+   9. LOADING STATE
+========================================= */
+
+.loading-message {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* =========================================
+   10. TABLE FOOTER
+========================================= */
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  padding: 16px 5px;
+
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.table-footer > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =========================================
+   11. SITE FOOTER
+========================================= */
+
+.site-footer {
+  padding: 30px 20px;
+  border-top: 1px solid var(--border);
+
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.site-footer p + p {
+  margin-top: 5px;
+}
+
+.site-footer a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* =========================================
+   12. ACCESSIBILITY
+========================================= */
+
+a:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   13. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 750px) {
+  .navbar {
+    padding: 18px 20px;
+  }
+
+  .fcc-logo {
+    width: 155px;
+  }
+
+  .community-label {
+    font-size: 0.65rem;
+  }
+
+  .hero {
+    padding: 42px 20px 48px;
+  }
+
+  .main-container {
+    padding: 35px 15px 50px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .section-heading h2 {
+    font-size: 1.15rem;
+  }
+
+  .section-heading p {
+    font-size: 0.8rem;
+  }
+
+  .forum-link {
+    padding: 9px 12px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  table {
+    min-width: 760px;
+  }
+
+  th {
+    padding: 16px 12px;
+  }
+
+  td {
+    padding: 18px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .community-label {
+    letter-spacing: 0.5px;
+  }
+
+  .fcc-logo {
+    width: 135px;
+  }
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .section-heading {
+    flex-direction: column;
+  }
+
+  .table-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================
+   14. REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

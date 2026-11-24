@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Explore the latest freeCodeCamp community discussions, topics, replies, and activity."
+  >
+
+  <meta name="theme-color" content="#0b1220">
+
+  <title>Forum Leaderboard | freeCodeCamp Community</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#" class="brand" aria-label="Forum Leaderboard home">
+        <img
+          class="fcc-logo"
+          src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+          alt="freeCodeCamp logo"
+        >
+      </a>
+
+      <span class="community-label">
+        COMMUNITY DASHBOARD
+      </span>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">
+          <span class="status-dot"></span>
+          LIVE COMMUNITY ACTIVITY
+        </span>
+
+        <h1 class="title">Latest Topics</h1>
+
+        <p class="hero-description">
+          Discover what's happening in the freeCodeCamp community.
+          Explore discussions, connect with learners, and stay updated.
+        </p>
+      </div>
+    </section>
+  </header>
+
+  <main class="main-container">
+
+    <section class="leaderboard-section">
+
+      <div class="section-heading">
+        <div>
+          <h2>Community Discussions</h2>
+          <p>Recently active conversations from the forum.</p>
+        </div>
+
+        <a
+          class="forum-link"
+          href="https://forum.freecodecamp.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Forum ↗
+        </a>
+      </div>
+
+      <div class="table-wrapper">
+
+        <table>
+          <thead>
+            <tr>
+              <th id="topics">Topics</th>
+              <th id="avatars">Avatars</th>
+              <th id="replies">Replies</th>
+              <th id="views">Views</th>
+              <th id="activity">Activity</th>
+            </tr>
+          </thead>
+
+          <tbody id="posts-container">
+            <tr>
+              <td colspan="5" class="loading-message">
+                Loading community discussions...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="table-footer">
+        <span>
+          <span class="status-dot"></span>
+          Latest forum data
+        </span>
+
+        <span>Powered by freeCodeCamp Forum</span>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Built with JavaScript by
+      <a href="https://github.com/kura458" target="_blank" rel="noopener noreferrer">
+        Kura Lemma
+      </a>
+    </p>
+
+    <p>Learning, building, and growing together.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
