@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="A responsive music player built with HTML, CSS, and JavaScript."
+  >
+
+  <title>Melody | Music Player</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="app-container">
+
+    <header class="topbar">
+      <a href="#" class="brand">
+        <span class="brand-icon">♫</span>
+        <span>melody<span class="brand-dot">.</span></span>
+      </a>
+
+      <span class="topbar-label">YOUR PERSONAL MUSIC PLAYER</span>
+    </header>
+
+    <section class="player-section">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR MUSIC</p>
+          <h1>Music Player</h1>
+          <p class="subtitle">Your favorite songs, all in one place.</p>
+        </div>
+
+        <span class="playlist-count" id="song-count">05 TRACKS</span>
+      </div>
+
+      <div class="player-card">
+
+        <div class="album-art">
+          <img
+            id="album-image"
+            src="https://cdn.freecodecamp.org/curriculum/js-music-player/digital-drift.jpg"
+            alt="Album cover artwork"
+          >
+
+          <div class="album-overlay">
+            <span class="playing-indicator">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+        </div>
+
+        <div class="player-information">
+
+          <p class="now-playing-label">
+            <span class="status-dot"></span>
+            NOW PLAYING
+          </p>
+
+          <div class="song-information">
+            <h2 id="player-song-title">Select a song</h2>
+            <p id="player-song-artist">Choose from your playlist</p>
+          </div>
+
+          <div class="player-controls">
+
+            <button
+              id="previous"
+              class="control-button"
+              aria-label="Previous song"
+              title="Previous song"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 5v14l-9-7 9-7ZM5 5h2v14H5z"/>
+              </svg>
+            </button>
+
+            <button
+              id="play"
+              class="play-button"
+              aria-label="Play"
+              title="Play"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+
+            <button
+              id="pause"
+              class="control-button"
+              aria-label="Pause"
+              title="Pause"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 5h4v14H6zM14 5h4v14h-4z"/>
+              </svg>
+            </button>
+
+            <button
+              id="next"
+              class="control-button"
+              aria-label="Next song"
+              title="Next song"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 5v14l9-7-9-7Zm14 0h-2v14h2z"/>
+              </svg>
+            </button>
+
+          </div>
+
+          <p class="player-footer">ENJOY YOUR MUSIC</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="playlist-section">
+
+      <div class="playlist-heading">
+        <div>
+          <p class="eyebrow">YOUR COLLECTION</p>
+          <h2>Playlist</h2>
+        </div>
+
+        <span class="playlist-subtitle">Select a track to play</span>
+      </div>
+
+      <ul id="playlist-songs" class="playlist-songs">
+        <li id="song-0" class="playlist-song">
+          <button class="playlist-song-info">
+            <span class="song-number">01</span>
+            <span class="playlist-song-title">Hello World</span>
+            <span class="playlist-song-artist">Rafael</span>
+            <span class="playlist-song-duration">0:23</span>
+          </button>
+        </li>
+
+        <li id="song-1" class="playlist-song">
+          <button class="playlist-song-info">
+            <span class="song-number">02</span>
+            <span class="playlist-song-title">In the Zone</span>
+            <span class="playlist-song-artist">Rafael</span>
+            <span class="playlist-song-duration">0:11</span>
+          </button>
+        </li>
+
+        <li id="song-2" class="playlist-song">
+          <button class="playlist-song-info">
+            <span class="song-number">03</span>
+            <span class="playlist-song-title">Camper Cat</span>
+            <span class="playlist-song-artist">Rafael</span>
+            <span class="playlist-song-duration">0:21</span>
+          </button>
+        </li>
+
+        <li id="song-3" class="playlist-song">
+          <button class="playlist-song-info">
+            <span class="song-number">04</span>
+            <span class="playlist-song-title">Electronic</span>
+            <span class="playlist-song-artist">Rafael</span>
+            <span class="playlist-song-duration">0:15</span>
+          </button>
+        </li>
+
+        <li id="song-4" class="playlist-song">
+          <button class="playlist-song-info">
+            <span class="song-number">05</span>
+            <span class="playlist-song-title">Sailing Away</span>
+            <span class="playlist-song-artist">Rafael</span>
+            <span class="playlist-song-duration">0:22</span>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p>Built with <span>♥</span> using HTML, CSS & JavaScript</p>
+      <p>MELODY MUSIC PLAYER © 2026</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
