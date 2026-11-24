@@ -38,7 +38,6 @@ Melody allows users to play, pause, and navigate through a playlist with a clean
 ├── styles.css
 ├── script.js
 └── README.md
-```
 
 ## 🎧 Playlist
 
