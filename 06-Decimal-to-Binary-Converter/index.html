@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A modern bidirectional decimal and binary number converter built with JavaScript recursion.">
+  <title>Binary Converter | JavaScript Project</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">Binary<span>Converter</span></a>
+    <span class="header-tag">JavaScript Project</span>
+  </header>
+
+  <main class="main-container">
+    <section class="hero">
+      <span class="eyebrow">NUMBER SYSTEM TOOL</span>
+      <h1>Decimal & Binary<br><span>Converter</span></h1>
+      <p>Convert numbers between decimal and binary systems instantly.</p>
+    </section>
+
+    <section class="converter-card">
+      <div class="card-heading">
+        <h2>Number Converter</h2>
+        <span class="status-dot">Ready</span>
+      </div>
+
+      <label for="conversion-mode">Conversion direction</label>
+      <select id="conversion-mode">
+        <option value="decimal-to-binary">Decimal → Binary</option>
+        <option value="binary-to-decimal">Binary → Decimal</option>
+      </select>
+
+      <label for="number-input" id="input-label">Enter a decimal number</label>
+      <input
+        id="number-input"
+        type="text"
+        inputmode="numeric"
+        placeholder="e.g. 25"
+        autocomplete="off"
+      >
+
+      <div class="button-group">
+        <button id="convert-btn" class="primary-btn">Convert Number</button>
+        <button id="clear-btn" class="secondary-btn">Clear</button>
+      </div>
+
+      <div class="result-section">
+        <span class="result-label">CONVERSION RESULT</span>
+        <output id="result" aria-live="polite">Your result will appear here</output>
+        <button id="copy-btn" class="copy-btn" disabled>Copy Result</button>
+      </div>
+
+      <p id="error-message" class="error-message" role="alert"></p>
+    </section>
+
+    <section class="animation-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">VISUAL LEARNING</span>
+          <h2>Recursive Call Stack</h2>
+        </div>
+        <span class="animation-badge">Interactive</span>
+      </div>
+
+      <p class="animation-description">
+        See how the recursive decimal-to-binary function calls itself
+        and returns values.
+      </p>
+
+      <div id="animation-container">
+        <p class="empty-animation">Convert decimal 5 to see the animation.</p>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>Understanding Number Systems</h2>
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Decimal (Base 10)</h3>
+          <p>Uses ten digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.</p>
+        </article>
+        <article class="info-card">
+          <h3>Binary (Base 2)</h3>
+          <p>Uses only two digits: 0 and 1. Computers use binary to represent data.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built with HTML, CSS and JavaScript.</p>
+    <p>Learning by building.</p>
+  </footer>
+</body>
+</html>
