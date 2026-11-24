@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="A modern interactive drum machine built with HTML, CSS, and JavaScript."
+  >
+
+  <title>BeatLab | Drum Machine</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <main class="page-container">
+
+    <header class="header">
+      <a href="#" class="logo">
+        <span class="logo-icon">♫</span>
+        BeatLab<span class="logo-dot">.</span>
+      </a>
+
+      <span class="header-label">DIGITAL DRUM STUDIO</span>
+    </header>
+
+    <section id="drum-machine">
+
+      <div class="machine-heading">
+        <div>
+          <p class="eyebrow">MAKE SOME NOISE</p>
+          <h1>Drum Machine</h1>
+          <p class="subtitle">
+            Tap a pad or use your keyboard to create your beat.
+          </p>
+        </div>
+
+        <div class="live-indicator">
+          <span></span>
+          LIVE
+        </div>
+      </div>
+
+      <div class="machine-panel">
+
+        <div class="panel-top">
+          <div class="panel-brand">
+            <span class="panel-brand-icon">◈</span>
+            BEATLAB / 001
+          </div>
+
+          <span class="panel-mode">PERFORMANCE MODE</span>
+        </div>
+
+        <div class="machine-screen">
+          <div class="screen-label">
+            <span class="screen-dot"></span>
+            CURRENT SOUND
+          </div>
+
+          <p id="display" aria-live="polite">
+            READY TO PLAY
+          </p>
+
+          <div class="screen-decoration">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="pad-section-heading">
+          <span>DRUM PADS</span>
+          <span>KEYBOARD LAYOUT: Q W E / A S D / Z X C</span>
+        </div>
+
+        <div id="pad-bank">
+
+          <button class="drum-pad" id="heater-one" type="button">
+            <span class="pad-key">Q</span>
+            <span class="pad-name">HEATER 1</span>
+            <audio
+              class="clip"
+              id="Q"
+              src="https://cdn.freecodecamp.org/curriculum/drum/Heater-1.mp3"
+            ></audio>
+          </button>
+
+          <button class="drum-pad" id="heater-two" type="button">
+            <span class="pad-key">W</span>
+            <span class="pad-name">HEATER 2</span>
+            <audio
+              class="clip"
+              id="W"
+              src="https://cdn.freecodecamp.org/curriculum/drum/Heater-2.mp3"
+            ></audio>
+          </button>
+
+          <button class="drum-pad" id="heater-three" type="button">
+            <span class="pad-key">E</span>
+            <span class="pad-name">HEATER 3</span>
+            <audio
+              class="clip"
+              id="E"
+              src="https://cdn.freecodecamp.org/curriculum/drum/Heater-3.mp3"
+            ></audio>
+          </button>
+
+          <button class="drum-pad" id="heater-four" type="button">
+            <span class="pad-key">A</span>
+            <span class="pad-name">HEATER 4</span>
+            <audio
+              class="clip"
+              id="A"
+              src="https://cdn.freecodecamp.org/curriculum/drum/Heater-4_1.mp3"
+            ></audio>
+          </button>
+
+          <button class="drum-pad" id="clap" type="button">
+            <span class="pad-key">S</span>
+            <span class="pad-name">CLAP</span>
+            <audio
+              class="clip"
+              id="S"
+              src="https://cdn.freecodecamp.org/curriculum/drum/Heater-6.mp3"
+            ></audio>
+          </button>
+
+          <button class="drum-pad" id="open-hh" type="button">
+            <span class="pad-key">D</span>
+            <span class="pad-name">OPEN HH</span>
+            <audio
+              class="clip"
+              id="D"
+              src="https://cdn.freecodecamp.org/curriculum/drum/Dsc_Oh.mp3"
+            ></audio>
+          </button>
+
+          <button class="drum-pad" id="kick-n-hat" type="button">
+            <span class="pad-key">Z</span>
+            <span class="pad-name">KICK N HAT</span>
+            <audio
+              class="clip"
+              id="Z"
+              src="https://cdn.freecodecamp.org/curriculum/drum/Kick_n_Hat.mp3"
+            ></audio>
+          </button>
+
+          <button class="drum-pad" id="kick" type="button">
+            <span class="pad-key">X</span>
+            <span class="pad-name">KICK</span>
+            <audio
+              class="clip"
+              id="X"
+              src="https://cdn.freecodecamp.org/curriculum/drum/RP4_KICK_1.mp3"
+            ></audio>
+          </button>
+
+          <button class="drum-pad" id="closed-hh" type="button">
+            <span class="pad-key">C</span>
+            <span class="pad-name">CLOSED HH</span>
+            <audio
+              class="clip"
+              id="C"
+              src="https://cdn.freecodecamp.org/curriculum/drum/Cev_H2.mp3"
+            ></audio>
+          </button>
+
+        </div>
+
+        <div class="panel-footer">
+          <span>9 SOUND SAMPLES</span>
+          <span>POWERED BY JAVASCRIPT</span>
+        </div>
+
+      </div>
+
+      <p class="instruction">
+        <span>TIP:</span> Press Q, W, E, A, S, D, Z, X, or C to trigger a sound.
+      </p>
+
+    </section>
+
+    <footer class="footer">
+      <p>Built with <span>♥</span> using HTML, CSS & JavaScript</p>
+      <p>BEATLAB © 2026</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
