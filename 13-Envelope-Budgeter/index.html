@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Manage your monthly income and expenses with Envelope Budgeter."
+  >
+
+  <title>Envelope Budgeter | Personal Finance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="#" class="brand">
+      <span class="brand-icon">E</span>
+      <span>Envelope<span class="brand-accent">.</span></span>
+    </a>
+
+    <span class="header-label">PERSONAL FINANCE</span>
+  </header>
+
+  <main class="page-wrapper">
+    <section class="intro">
+      <span class="eyebrow">TAKE CONTROL OF YOUR MONEY</span>
+      <h1>Give every dollar <span>a purpose.</span></h1>
+      <p>
+        Plan your monthly spending, organize your expenses,
+        and understand exactly where your money goes.
+      </p>
+    </section>
+
+    <section class="budget-card">
+      <div class="card-heading">
+        <div>
+          <h2>Monthly Budget</h2>
+          <p>Enter your income and organize your expenses.</p>
+        </div>
+        <span class="budget-icon">↗</span>
+      </div>
+
+      <form id="budget-form">
+
+        <div class="income-section">
+          <label for="income">Total Monthly Income</label>
+          <div class="income-input">
+            <span>$</span>
+            <input
+              type="number"
+              min="0"
+              id="income"
+              placeholder="e.g. 3000"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="section-title">
+          <h3>Fixed Expenses</h3>
+          <span>01</span>
+        </div>
+
+        <fieldset id="rent" class="expense-group fixed-expense">
+          <legend>Rent</legend>
+          <label for="rent-amount">Monthly rent amount</label>
+          <div class="amount-input">
+            <span>$</span>
+            <input
+              type="number"
+              min="0"
+              id="rent-amount"
+              placeholder="0.00"
+            >
+          </div>
+        </fieldset>
+
+        <div class="section-divider"></div>
+
+        <div class="section-title">
+          <h3>Flexible Expenses</h3>
+          <span>02</span>
+        </div>
+
+        <fieldset id="food" class="expense-group">
+          <legend>
+            <span class="category-icon food-icon">🍎</span>
+            Food
+          </legend>
+          <p class="group-description">Groceries, restaurants, and meals.</p>
+          <div class="input-container"></div>
+        </fieldset>
+
+        <fieldset id="utilities" class="expense-group">
+          <legend>
+            <span class="category-icon utility-icon">⚡</span>
+            Utilities
+          </legend>
+          <p class="group-description">Electricity, water, internet, and bills.</p>
+          <div class="input-container"></div>
+        </fieldset>
+
+        <fieldset id="entertainment" class="expense-group">
+          <legend>
+            <span class="category-icon entertainment-icon">🎬</span>
+            Entertainment
+          </legend>
+          <p class="group-description">Movies, subscriptions, and hobbies.</p>
+          <div class="input-container"></div>
+        </fieldset>
+
+        <div class="add-expense-panel">
+          <div>
+            <h3>Add an expense</h3>
+            <p>Choose a category and add a new expense.</p>
+          </div>
+
+          <div class="add-controls">
+            <label for="entry-dropdown" class="visually-hidden">
+              Add expense to
+            </label>
+
+            <select id="entry-dropdown" name="options">
+              <option value="food" selected>Food</option>
+              <option value="utilities">Utilities</option>
+              <option value="entertainment">Entertainment</option>
+            </select>
+
+            <button type="button" id="add-entry" class="add-button">
+              + Add Entry
+            </button>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="calculate-button">
+            Calculate Budget <span>→</span>
+          </button>
+
+          <button type="button" id="clear" class="clear-button">
+            Clear Form
+          </button>
+        </div>
+      </form>
+
+      <div id="output" class="output hide"></div>
+    </section>
+
+    <footer class="page-footer">
+      <p>Built with care. Designed for better financial habits.</p>
+      <span>ENVELOPE BUDGETER © 2026</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
