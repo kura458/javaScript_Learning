@@ -1,82 +1,75 @@
-
 # JavaScript Learning
 
-A structured collection of JavaScript exercises, examples, and practice projects designed to build proficiency in the language from fundamentals through practical applications.
+A hands-on collection of JavaScript exercises, FreeCodeCamp projects, and small applications documenting my progress from core language fundamentals to practical browser-based development.
 
-## Overview
+## What This Repository Contains
 
-This repository provides hands-on material for learning and practicing JavaScript concepts commonly used in web development. Examples are kept concise and easy to adapt for independent learning.
+The repository is organized as a growing learning portfolio. It includes:
 
-## Topics Covered
+- **JavaScript fundamentals:** variables, strings, booleans, numbers, operators, and functions.
+- **Arrays and objects:** data manipulation, object properties, and common built-in methods.
+- **DOM and browser interaction:** event handling, interactive UI components, and browser APIs.
+- **Algorithms and problem solving:** searching, sorting, linked lists, and visual demonstrations.
+- **FreeCodeCamp projects:** guided projects covering forms, accessibility, and interactive applications.
+- **Practice applications:** small projects such as a weather app, music player, drum machine, bookmark manager, todo app, and budget/envelope tools.
 
-- Variables and data types
-- Operators and expressions
-- Conditional statements
-- Loops and iteration
-- Functions and scope
-- Arrays and array methods
-- Objects and JSON
-- DOM manipulation
-- Event handling
-- Basic asynchronous JavaScript
-- Small JavaScript projects
+## Selected Projects
+
+Some of the larger or more practical projects in this repository include:
+
+| Project | What it demonstrates |
+|---|---|
+| [Professional Todo App](08-Professional-Todo-App/) | Interactive task management with JavaScript |
+| [Weather App](09-Weather-App/) | Working with weather data and browser UI |
+| [Music Player](10-Music-Player/) | Audio controls and interactive playback UI |
+| [Drum Machine](11-Drum-Machine/) | Event-driven sound interactions |
+| [Envelope Budgeter](13-Envelope-Budgeter/) | Budgeting concepts and form interactions |
+| [Searching and Sorting Algorithms](08-Searching-and-Sorting-Algorithms/) | Core algorithm implementations |
+| [Linked List Implementation](06-Linked-List-Implementation/) | Basic data-structure operations |
+| [Shopping Cart Application](06-Classes/Shopping-Cart-Application/) | Classes and object-oriented JavaScript |
+
+The repository also contains smaller focused exercises and UI projects. Each project folder may include its own README with more specific instructions.
 
 ## Getting Started
 
-### Prerequisites
+### Requirements
 
 - A modern web browser
-- A text editor or integrated development environment
-- Optional: Node.js for running JavaScript from the command line
+- A code editor such as Visual Studio Code
+- Node.js for projects that use Node.js or npm
 
-### Installation
-
-Clone the repository:
+### Clone the Repository
 
 ```bash
 git clone https://github.com/kura458/javaScript_Learning.git
 cd javaScript_Learning
 ```
 
-### Usage
+### Run JavaScript Files
 
-Run JavaScript files with Node.js:
+For a standalone JavaScript file:
 
 ```bash
-node filename.js
+node path/to/file.js
 ```
 
-For browser-based examples, open the relevant HTML file in a browser or use a local development server.
+For browser-based projects, open the project's `index.html` file in a browser. If a project includes a `package.json`, follow the commands in that project's README.
 
-## Repository Structure
+## How I Use This Repository
 
-```text
-javaScript_Learning/
-├── README.md
-├── examples/
-├── exercises/
-└── projects/
-```
+1. Study a JavaScript concept.
+2. Practice it with small examples.
+3. Build or complete a focused project.
+4. Test the behavior and review the code.
+5. Refine the implementation as I learn more.
 
-> The repository structure may evolve as additional learning material is added.
+## Learning Goals
 
-## Learning Approach
+- Strengthen JavaScript fundamentals and problem-solving skills.
+- Become more confident with the DOM, events, and browser APIs.
+- Practice writing reusable and readable code.
+- Build a foundation for modern frontend development with React.
 
-1. Review each concept and example.
-2. Run the code to observe its behavior.
-3. Modify the examples to test your understanding.
-4. Complete exercises without referring to solutions.
-5. Apply concepts in a small project.
+## Note
 
-## Contributing
-
-Contributions are welcome.
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Make your changes.
-4. Submit a pull request with a clear description.
-
-## License
-
-This project is intended for educational use.
+This is an actively evolving personal learning repository. Folder names and project contents may change as new exercises and applications are added.
